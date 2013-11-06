@@ -46,6 +46,8 @@ BOARD_USE_SYSFS_VSYNC_NOTIFICATION := true
 # set if the target supports FBIO_WAITFORVSYNC
 TARGET_HAS_WAITFORVSYNC := true
 
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+
 # Setup custom omap4xxx defines
 BOARD_USE_CUSTOM_LIBION := true
 
