@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter i9100g p3100 p3110 p5100 p5110,$(TARGET_DEVICE)),)
+ifneq ($(filter i9100g p3100 p3110 p5100 p5110 superior,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
