@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     libnetcmdiface \
     tinyplay \
     tinycap \
+    macloader \
     tinymix
 
 # Support for Browser's saved page feature. This allows
@@ -52,13 +53,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     com.ti.omap_enhancement=true \
     omap.enhancement=true \
     ro.telephony.ril_class=SamsungExynos4RIL \
+    mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.call_ring.delay=3000 \
     ro.bq.gpu_to_cpu_unsupported=1
 
+ifneq ($(TARGET_BOARD_OMAP_CPU),4470)
 # SGX540 is slower with the scissor optimization enabled
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.disable_scissor_opt=true
+endif
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
