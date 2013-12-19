@@ -40,8 +40,13 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_BOARD_PLATFORM := omap4
 
 # RIL
-BOARD_PROVIDES_LIBRIL := true
-BOARD_MODEM_TYPE := xmm6260
+ifdef TARGET_BOARD_OMAP_4470
+    BOARD_PROVIDES_LIBRIL := true
+    BOARD_MODEM_TYPE := xmm6262
+else
+    BOARD_PROVIDES_LIBRIL := true
+    BOARD_MODEM_TYPE := xmm6260
+endif
 
 # HWComposer
 BOARD_USES_HWCOMPOSER := true
@@ -64,11 +69,23 @@ OMAP_ENHANCEMENT_MULTIGPU := true
 #BOARD_USE_TI_ENHANCED_DOMX := true
 
 # External SGX Module
+ifdef TARGET_BOARD_OMAP_4470
+SGX_MODULES:
+	make clean -C $(COMMON_PATH)/pvr-source/eurasiacon/build/linux2/omap4430_android
+	cp $(TARGET_KERNEL_SOURCE)/drivers/video/omap2/omapfb/omapfb.h $(KERNEL_OUT)/drivers/video/omap2/omapfb/omapfb.h
+	make -j8 -C $(COMMON_PATH)/pvr-source/eurasiacon/build/linux2/omap4430_android ARCH=arm KERNEL_CROSS_COMPILE=arm-eabi- CROSS_COMPILE=arm-eabi- KERNELDIR=$(KERNEL_OUT) TARGET_PRODUCT="blaze_tablet" BUILD=release TARGET_SGX=544sc PLATFORM_VERSION=4.0
+	mv $(KERNEL_OUT)/../../target/kbuild/pvrsrvkm_sgx544_112.ko $(KERNEL_MODULES_OUT)
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/pvrsrvkm_sgx544_112.ko
+
+else
+
 SGX_MODULES:
 	make clean -C $(COMMON_PATH)/pvr-source/eurasiacon/build/linux2/omap4430_android
 	cp $(TARGET_KERNEL_SOURCE)/drivers/video/omap2/omapfb/omapfb.h $(KERNEL_OUT)/drivers/video/omap2/omapfb/omapfb.h
 	make -j8 -C $(COMMON_PATH)/pvr-source/eurasiacon/build/linux2/omap4430_android ARCH=arm KERNEL_CROSS_COMPILE=arm-eabi- CROSS_COMPILE=arm-eabi- KERNELDIR=$(KERNEL_OUT) TARGET_PRODUCT="blaze_tablet" BUILD=release TARGET_SGX=540 PLATFORM_VERSION=4.0
 	mv $(KERNEL_OUT)/../../target/kbuild/pvrsrvkm_sgx540_120.ko $(KERNEL_MODULES_OUT)
+
+endif
 
 TARGET_KERNEL_MODULES += SGX_MODULES
 
