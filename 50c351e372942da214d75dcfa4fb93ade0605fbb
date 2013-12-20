@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6b8b61a3_da317bba",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000032
+      },
+      "writtenOn": "2013-12-20T18:23:40Z",
+      "side": 1,
+      "message": "Do you think we should move this out of common then?",
+      "parentUuid": "6b8b61a3_3ad41f49",
+      "revId": "50c351e372942da214d75dcfa4fb93ade0605fbb",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6b8b61a3_fad9d783",
         "filename": "common.mk",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2013-12-20T18:21:09Z",
       "side": 1,
       "message": "Rather than TARGET_BOARD_OMAP_4470, it may be better to move some of these items up a level (e.g. out of -common)",
+      "revId": "50c351e372942da214d75dcfa4fb93ade0605fbb",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8b61a3_bac02f81",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1000032
+      },
+      "writtenOn": "2013-12-20T18:23:40Z",
+      "side": 1,
+      "message": "I think we can let this particular one go. All the OMAP4 chips except for the 4470 uses SGX540.",
+      "parentUuid": "6b8b61a3_5ac9ebac",
       "revId": "50c351e372942da214d75dcfa4fb93ade0605fbb",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
       "unresolved": false
