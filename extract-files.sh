@@ -35,6 +35,9 @@ for FILE in `cat $COMMONPROPS | grep -v ^# | grep -v ^$`; do
     adb pull /$FILE $COMMONBASE/$FILE
 done
 
+adb pull /system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so $COMMONBASE/system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so
+adb pull /system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so $COMMONBASE/system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so
+adb pull /system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so $COMMONBASE/system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so
 
 (cat << EOF) | sed s/__COMMON__/$COMMON/g | sed s/__VENDOR__/$VENDOR/g > $COMMONMAKEFILE
 # Copyright (C) 2013 The CyanogenMod Project
@@ -52,6 +55,15 @@ done
 # limitations under the License.
 
 LOCAL_PATH := vendor/samsung/__COMMON__
+
+ifneq (\$(TARGET_DEVICE),superior)
+
+PRODUCT_COPY_FILES += \\
+    \$(LOCAL_PATH)/proprietary/system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so:system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so \\
+    \$(LOCAL_PATH)/proprietary/system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so \\
+    \$(LOCAL_PATH)/proprietary/system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so:system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so
+
+endif
 
 PRODUCT_COPY_FILES += \\
 EOF
