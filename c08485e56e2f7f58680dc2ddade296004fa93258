@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b77b57d_65009bb7",
+        "filename": "camera/OMXCameraAdapter/OMXCapabilities.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 970,
+      "author": {
+        "id": 1000032
+      },
+      "writtenOn": "2014-06-22T01:18:30Z",
+      "side": 1,
+      "message": "Note to self",
+      "revId": "c08485e56e2f7f58680dc2ddade296004fa93258",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
