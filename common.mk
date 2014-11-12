@@ -24,7 +24,10 @@ PRODUCT_PACKAGES += \
 	libion_ti \
     libstagefrighthw \
     smc_pa_ctrl \
-    tf_daemon
+    tf_daemon \
+    libcorkscrew \
+    pvrsrvinit \
+    libPVRScopeServices.so
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
