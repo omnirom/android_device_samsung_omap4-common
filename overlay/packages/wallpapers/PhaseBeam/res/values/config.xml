@@ -16,5 +16,5 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Disable scrolling, SGX540 isn't powerful enough to handle it -->
-    <bool name="allow_scrolling" translatable="false">false</bool>
+    <!-- <bool name="allow_scrolling" translatable="false">false</bool> -->
 </resources>
