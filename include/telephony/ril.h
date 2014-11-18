@@ -38,7 +38,28 @@ extern "C" {
 #define CDMA_ALPHA_INFO_BUFFER_LENGTH 64
 #define CDMA_NUMBER_INFO_BUFFER_LENGTH 81
 
+#define MAX_RILDS 3
+#define MAX_SOCKET_NAME_LENGTH 6
+#define MAX_CLIENT_ID_LENGTH 2
+#define MAX_DEBUG_SOCKET_NAME_LENGTH 12
+#define MAX_QEMU_PIPE_NAME_LENGTH  11
+
 typedef void * RIL_Token;
+
+typedef enum {
+    RIL_SOCKET_1,
+#if (SIM_COUNT >= 2)
+    RIL_SOCKET_2,
+#if (SIM_COUNT >= 3)
+    RIL_SOCKET_3,
+#endif
+#if (SIM_COUNT >= 4)
+    RIL_SOCKET_4,
+#endif
+#endif
+    RIL_SOCKET_NUM
+} RIL_SOCKET_ID;
+
 
 typedef enum {
     RIL_E_SUCCESS = 0,
