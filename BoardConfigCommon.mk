@@ -53,6 +53,12 @@ BOARD_RIL_CLASS := ../../../device/samsung/omap4-common/ril
 BOARD_USES_HWCOMPOSER := true
 BOARD_USE_SYSFS_VSYNC_NOTIFICATION := true
 
+ifneq ($(filter p3100 p3110 p5100 p5110,$(TARGET_DEVICE)),)
+   TARGET_TI_HWC_HDMI_DISABLED := true
+endif
+
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+
 # Setup custom omap4xxx defines
 BOARD_USE_CUSTOM_LIBION := true
 
