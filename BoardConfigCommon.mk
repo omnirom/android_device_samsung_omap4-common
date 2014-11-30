@@ -39,6 +39,9 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 # Custom Toolchain
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
+#Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 # Platform
 TARGET_BOARD_PLATFORM := omap4
 
