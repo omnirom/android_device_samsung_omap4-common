@@ -50,8 +50,6 @@ BOARD_RIL_CLASS := ../../../device/samsung/omap4-common/ril
 BOARD_USES_HWCOMPOSER := true
 BOARD_USE_SYSFS_VSYNC_NOTIFICATION := true
 
-TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
-
 # Setup custom omap4xxx defines
 BOARD_USE_CUSTOM_LIBION := true
 
