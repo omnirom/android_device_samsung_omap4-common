@@ -58,7 +58,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
-$(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
-
 # Include non-opensource parts
 $(call inherit-product, vendor/samsung/omap4-common/common-vendor.mk)
