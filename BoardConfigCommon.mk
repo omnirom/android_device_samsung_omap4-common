@@ -45,6 +45,9 @@ EXTENDED_FONT_FOOTPRINT := true
 # Platform
 TARGET_BOARD_PLATFORM := omap4
 
+# RIL
+BOARD_RIL_CLASS := ../../../device/samsung/omap4-common/ril
+
 # HWComposer
 BOARD_USES_HWCOMPOSER := true
 BOARD_USE_SYSFS_VSYNC_NOTIFICATION := true
