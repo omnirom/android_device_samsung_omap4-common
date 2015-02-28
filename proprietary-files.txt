@@ -27,3 +27,9 @@ system/vendor/lib/libsrv_um_SGX540_120.so
 system/vendor/lib/libsrv_um_SGX544_112.so
 system/vendor/lib/libusc_SGX540_120.so
 system/vendor/lib/libusc_SGX544_112.so
+lib/libdrmdecrypt.so
+vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvdrm_L3.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L3.so
