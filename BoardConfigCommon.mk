@@ -28,6 +28,9 @@ COMMON_GLOBAL_CFLAGS += -DREFBASE_JB_MR1_COMPAT_SYMBOLS
 # Dex Pre-opt
 WITH_DEXPREOPT := true
 
+# Use dlmalloc
+MALLOC_IMPL := dlmalloc
+
 # CPU
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
