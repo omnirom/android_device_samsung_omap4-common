@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8eba960_f03dee26",
+        "filename": "sepolicy/file.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2015-07-18T14:54:22Z",
+      "side": 1,
+      "message": "move to i9100g ?",
+      "revId": "f35e5abcb7378bf53bc80e4e7deec0ba139987b8",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
