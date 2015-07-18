@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8eba960_5037fa48",
+        "filename": "sepolicy/bluetooth.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2015-07-18T14:40:45Z",
+      "side": 1,
+      "message": "alphabetic order?",
+      "revId": "2d66eb63c3f7f513a05e8946ea7aae6478a82791",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8eba960_10f6128b",
+        "filename": "sepolicy/domain.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2015-07-18T14:40:45Z",
+      "side": 1,
+      "message": "can be removed if we don\u0027t use it",
+      "revId": "2d66eb63c3f7f513a05e8946ea7aae6478a82791",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8eba960_f0f28e94",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2015-07-18T14:40:45Z",
+      "side": 1,
+      "message": "space :)",
+      "range": {
+        "startLine": 14,
+        "startChar": 42,
+        "endLine": 14,
+        "endChar": 43
+      },
+      "revId": "2d66eb63c3f7f513a05e8946ea7aae6478a82791",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8eba960_b0ec06bb",
+        "filename": "sepolicy/pvrsrvinit.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2015-07-18T14:40:45Z",
+      "side": 1,
+      "message": "alphabetic order?",
+      "revId": "2d66eb63c3f7f513a05e8946ea7aae6478a82791",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8eba960_902d82ff",
+        "filename": "sepolicy/radio.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2015-07-18T14:40:45Z",
+      "side": 1,
+      "message": "# radio",
+      "revId": "2d66eb63c3f7f513a05e8946ea7aae6478a82791",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8eba960_d0ef8aae",
+        "filename": "sepolicy/wpa_supplicant.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2015-07-18T14:40:45Z",
+      "side": 1,
+      "message": "# wpa supplicant",
+      "revId": "2d66eb63c3f7f513a05e8946ea7aae6478a82791",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
